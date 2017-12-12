@@ -8,18 +8,20 @@ import EmployeeList from './components/EmployeeList';
 const RouterComponent = () => {
 	return (
 		<Router>
-			<Scene key="root">
+			<Scene hideNavBar key="root">
 				<Scene key="auth">
-					<Scene key="login" component={LoginForm} title="Login" />
+					<Scene 	key="login" 
+							component={LoginForm} 
+							title="Login" />
 				</Scene>
 
 				<Scene key="main">	
 					<Scene 
-						onRight={() => console.log("right")}
-						rightTitle="Add"
-						key="employeeList"
-						component={EmployeeList} 
-						title="Employees" />
+							onRight={() => console.log("right")}
+							rightTitle="Add"
+							key="employeeList"
+							component={EmployeeList} 
+							title="Employees" />
 				</Scene>
 			</Scene>
 		</Router>
