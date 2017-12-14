@@ -9,7 +9,7 @@ class EmployeeList extends Component {
 	componentWillMount() {
 		this.props.employeesFetch();
 		this.createDataSource(this.props);
-		console.log(this.props);
+		console.log(this.props.employeesFetch());
 		
 	}
 
